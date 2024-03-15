@@ -1,0 +1,81 @@
+.task {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  color: var(--task-color);
+  font-size: 18px;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--complited-color);
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  .text {
+    flex: 1;
+  }
+
+  .check {
+    min-width: 30px;
+    height: 30px;
+    border: 1px solid var(--complited-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  &.active {
+    color: var(--complited-color);
+    .text {
+      text-decoration: line-through;
+    }
+    .check {
+      position: relative;
+      background-image: linear-gradient(
+        hsl(192, 100%, 67%),
+        hsl(280, 87%, 65%)
+      );
+      background-repeat: no-repeat;
+      background-position: 50%;
+      &::before {
+        content: "";
+        background-image: url(/src/assets/images/icon-check.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  img {
+    align-content: flex-end;
+    cursor: pointer;
+  }
+
+  .cross {
+    padding: 3px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    .cross {
+      opacity: 1;
+    }
+  }
+  &.dont-touch {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  h1 {
+    letter-spacing: 7px;
+    font-size: 40px;
+
+    @media (max-width: 576px) {
+      font-size: 35px;
+    }
+  }
+
+  img {
+    cursor: pointer;
+  }
+}

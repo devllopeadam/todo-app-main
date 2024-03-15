@@ -1,0 +1,26 @@
+.task-list {
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  max-height: 280px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--complited-color);
+    border-radius: 3px;
+  }
+
+  h2 {
+    text-align: center;
+    color: var(--complited-color);
+    padding: 20px;
+  }
+}

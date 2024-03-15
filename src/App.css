@@ -1,0 +1,15 @@
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+input,
+input::placeholder {
+  font-family: inherit;
+}

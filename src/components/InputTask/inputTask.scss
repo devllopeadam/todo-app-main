@@ -1,0 +1,44 @@
+.input-task {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  height: 65px;
+  background-color: var(--todo-bg);
+  border-radius: 3px;
+  box-shadow: var(--box-shadow);
+
+  span {
+    min-width: 30px;
+    height: 30px;
+    border: 1px solid var(--input-color);
+    border-radius: 50%;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: transparent;
+    color: var(--task-color);
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 17px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--task-color);
+  }
+
+  @media (max-width: 576px) {
+    gap: 10px;
+  }
+}

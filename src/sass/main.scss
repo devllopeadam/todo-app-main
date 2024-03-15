@@ -1,0 +1,107 @@
+:root {
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-bg: linear-gradient((192, 100%, 67%), hsl(280, 87%, 65%));
+  --body-bg: hsl(235, 21%, 11%);
+  --todo-bg: hsl(235, 24%, 19%);
+  --input-color: hsl(237, 14%, 26%);
+  --complited-color: hsl(233, 14%, 35%);
+  --task-color: hsl(234, 39%, 85%);
+  --options-color: hsl(234, 11%, 52%);
+  --options-hover: hsl(236, 33%, 92%);
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-bg: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+  --box-shadow: 0 0 20px -5px #0a0808;
+
+  --bg-img: url(../assets//images//bg-desktop-dark.jpg);
+  --bg-img-mobile: url(../assets///images/bg-mobile-dark.jpg);
+}
+
+[data-theme="light"] {
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-bg: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --body-bg: hsl(0, 0%, 98%);
+  --todo-bg: hsl(236, 33%, 92%);
+  --input-color: hsl(236, 9%, 61%);
+  --complited-color: hsl(233, 11%, 84%);
+  --task-color: hsl(236, 9%, 61%);
+  --options-color: hsl(235, 19%, 35%);
+  --options-hover: hsl(234, 11%, 52%);
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-bg: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+
+  --box-shadow: 0 0 20px -5px #dbdbdb;
+
+  --bg-img: url(../assets//images//bg-desktop-light.jpg);
+
+  --bg-img-mobile: url(../assets/images/bg-mobile-light.jpg);
+}
+
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+input,
+input::placeholder {
+  font-family: inherit;
+  color: inherit;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-color: var(--body-bg);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 94px;
+  justify-content: center;
+}
+
+.app {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media (max-width: 576px) {
+    padding-bottom: 40px;
+  }
+}
+
+.task-options {
+  background-color: var(--todo-bg);
+  border-radius: 3px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: var(--bg-img-mobile);
+  }
+
+  #root {
+    width: 90%;
+  }
+
+  .app {
+    width: 100%;
+    margin: auto;
+  }
+}
