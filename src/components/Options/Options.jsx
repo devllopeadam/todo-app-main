@@ -49,13 +49,32 @@ const Options = ({ setActiveTasks, setComplitedTasks, setAction }) => {
         <div className="left-clear">
           <div className="items-left">{`${itemsLeft} items left`}</div>
           <div className="clear-complited">
-            <p>Clear Completed</p>
+            <p onClick={clearComplited}>Clear Completed</p>
           </div>
         </div>
         <div className="controlls">
-          <p>All</p>
-          <p>Active</p>
-          <p>Completed</p>
+          <p
+            onClick={() => {
+              setAction("all");
+            }}>
+            All
+          </p>
+          <p
+            onClick={() => {
+              setActiveTasks(tasks.filter((task) => task.complited === false));
+              setAction("active");
+            }}>
+            Active
+          </p>
+          <p
+            onClick={() => {
+              setAction("complited");
+              setComplitedTasks(
+                tasks.filter((task) => task.complited === true)
+              );
+            }}>
+            Completed
+          </p>
         </div>
       </div>
     </>
